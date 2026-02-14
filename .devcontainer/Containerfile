@@ -1,0 +1,17 @@
+# Debian 12 + Python + uv preinstalled
+FROM ghcr.io/astral-sh/uv:bookworm-slim
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    LANG=C.UTF-8 \
+    LC_ALL=C.UTF-8
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+      coreutils \
+      python3-venv \
+      sagemath \
+      ca-certificates \
+      tmux \
+      btop \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /workspaces/polyVer

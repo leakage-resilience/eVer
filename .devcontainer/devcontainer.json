@@ -1,0 +1,28 @@
+{
+  "name": "polyVer Dev Container",
+  "dockerFile": "Containerfile",
+  "workspaceFolder": "/workspaces/polyVer",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+  "containerEnv": {
+    "VIRTUAL_ENV": "/workspaces/venv",
+    "PATH": "/workspaces/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+  },
+  "postCreateCommand": "/usr/bin/python3 -m venv /workspaces/venv --system-site-packages && uv pip install --python /workspaces/venv/bin/python -r requirements.txt",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/workspaces/venv/bin/python"
+      },
+      "extensions": [
+        "eamodio.gitlens",
+        "ms-vscode.makefile-tools",
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "charliermarsh.ruff",
+        "mechatroner.rainbow-csv"
+      ]
+    }
+  }
+}

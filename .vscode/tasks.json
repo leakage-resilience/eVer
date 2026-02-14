@@ -1,0 +1,38 @@
+// .vscode/tasks.json
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "🔨 Build PDF",
+      "type": "shell",
+      // alternatively to `docker compose -f .../compose.yml` one can change the current working directory such that docker can figure out the configuration file automatically.
+      // "options": {
+      //   "cwd": "${workspaceFolder}/.devcontainer"
+      // },
+      "command": [
+        "sudo",
+        "docker",
+        "compose",
+        "-f",
+        "${workspaceFolder}/.devcontainer/compose.yml",
+        "exec",
+        "-w",
+        "${workspaceFolder}/paper",
+        "texlive",
+        "latexmk",
+				"-synctex=1",
+				"-interaction=nonstopmode",
+				"-file-line-error",
+        "-lualatex",
+        "-f",
+        "main.tex"
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

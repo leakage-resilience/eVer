@@ -1,0 +1,8 @@
+jupyterlab
+nbconvert
+pytest
+diskcache
+tqdm
+pandas
+snakeviz
+networkx

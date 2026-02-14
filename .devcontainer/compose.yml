@@ -1,0 +1,23 @@
+name: polyver_devcontainer
+
+services:
+  polyver:
+    build:
+      context: .
+      dockerfile: Containerfile
+    depends_on:
+      - texlive
+    volumes:
+      - ..:/workspaces/polyVer:cached
+    working_dir: /workspaces/polyVer
+    # (workaround) keep this container alive:
+    command: ["sleep", "infinity"]
+
+  texlive:
+    image: registry.gitlab.com/islandoftex/images/texlive:latest
+    volumes:
+      - ..:/workspaces/polyVer:cached
+    working_dir: /workspaces/polyVer
+    # (workaround) keep this container alive:
+    command: ["sleep", "infinity"]
+
