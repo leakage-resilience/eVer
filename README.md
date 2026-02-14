@@ -1,6 +1,7 @@
 # Overview
 This repository contains the codebase belonging to the paper [eVer: Universal and Automated Verification of Side-Channel Security for Additive, Inner Product, Polynomial and General Code-Based Masking](https://eprint.iacr.org/2026/208).
 We publish the verification kernel, as well as, all 37 gadgets used to produce the benchmarks in our paper.
+If our paper or verification tool proves useful in your work, we kindly ask that you cite the corresponding publication.
 
 ## Getting Started
 This repository is configured to run inside a VS Code Dev Container based on Debian.
