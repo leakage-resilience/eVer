@@ -60,7 +60,7 @@ Flakes provide a standardized and reproducible way to manage project dependencie
 1. Install Nix by following the instructions on the official website. Make sure to [enable flakes support](https://nixos.wiki/wiki/Flakes#Enable_flakes).
 2. Once Nix is set up, run the following command in the project's root directory to enter the development shell:
    ```bash
-   nix develop path:.
+   nix develop 
    ```
 3. This will provide a shell with all the project dependencies readily available.
 4. You can run the commands as above, but instead of using `python3` you need to use `sage -python`.
