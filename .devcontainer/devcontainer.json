@@ -1,7 +1,7 @@
 {
-  "name": "polyVer Dev Container",
+  "name": "eVer Dev Container",
   "dockerFile": "Containerfile",
-  "workspaceFolder": "/workspaces/polyVer",
+  "workspaceFolder": "/workspaces/eVer",
   "features": {
     "ghcr.io/devcontainers/features/git:1": {}
   },
